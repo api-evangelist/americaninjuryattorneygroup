@@ -1,23 +1,68 @@
 aid: americaninjuryattorneygroup
+
 name: Americaninjuryattorneygroup
-description: 'Americaninjuryattorneygroup is a company surfaced via the API Evangelist harvest backlog
-  (source: secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.theinjurygroup.com/wp-content/uploads/2025/01/margarita_small-v3.png
+
+description: 'American Injury Attorney Group is a personal injury law firm serving New York and New Jersey, offering legal representation for car accidents, truck accidents, workers compensation, rideshare incidents, bicycle accidents, construction accidents, pedestrian accidents, motorcycle injuries, medical malpractice, wrongful death, premises liability, brain injuries, birth injuries, and product liability claims. The firm provides free 24/7 consultations and aims to help injured individuals obtain compensation.'
+
 url: https://raw.githubusercontent.com/api-evangelist/americaninjuryattorneygroup/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
 - Company
-apis: []
+- Law
+- Personal Injury
+- New York
+- New Jersey
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/americaninjuryattorneygroup-llms.txt
+- type: Hosts
+  url: hosts/americaninjuryattorneygroup-hosts.yml
+- type: TermsOfService
+  url: https://www.theinjurygroup.com/terms-of-service/
+- type: PrivacyPolicy
+  url: https://www.theinjurygroup.com/privacy-policy/
+- type: DomainSecurity
+  url: security/americaninjuryattorneygroup-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/americaninjuryattorneygroup
+  url: https://www.theinjurygroup.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract was found on the provider's website or API host.
+  evidence:
+    - url: https://api.theinjurygroup.com/openapi.json
+      status: 0
+    - url: https://api.theinjurygroup.com/v1/openapi.json
+      status: 0
+  checked: 2026-09-24
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
